@@ -1,0 +1,19 @@
+<div ng-controller="CtrlAdiciona">
+    <div class="col-md-12">
+        <div class="form-group">
+            {{ result }}
+            <div>
+                Add cars: <br>
+                <div class="form-group">
+                    <label for="usr"><small>Name:</small></label>
+                    <input class="form-control" id="usr" type="text" ng-model="cName">
+                </div>
+                <div class="form-group">
+                    <label for="searc"><small>Brand:</small></label>
+                    <input class="form-control" id="searc" type="text" ng-model="cBrand"><br>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="add()">Add car!</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div ng-controller="CtrlModulo">
+    <div class="col-md-12">
+        <b>Search:</b>
+        <input class="form-control" ng-model="busca" placeholder="Search Car By 'name' or 'brand'" name="srch-term" id="srch-term" type="text">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="carro in carros | filter:busca">
+                    <td>{{ carro.name }}</td>
+                    <td>{{ carro.brand }}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" ng-click="remove($index)">Remove Car</button>
+                        <a href="#/acao/{{$index}}"><button type="button" class="btn btn-warning">Edit Car</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
